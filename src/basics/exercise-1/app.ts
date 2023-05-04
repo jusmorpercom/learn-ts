@@ -45,12 +45,12 @@ let students: Array<string | null> = ['Nico', 'Yhoan', 'rayffer', null, ' ana'];
 console.log( students.filter((student) => student !== null));
 
 // Tuplas 
-let exampleTuples: [string, null]  ['hola', null]; 
+let exampleTuples: [string, null] =  ['hola', null]; 
 
 // Tipos personalizados 
 type statusCode = 'active' | 'inactive'; // Creamos un type para que sea escrito especificamente como se le describen 
 
-let studentStatus: statusCode = 'Inactive'; 
+let studentStatus: statusCode = 'inactive'; 
 
 // Any 
 let working: any = 25; 
@@ -108,4 +108,4 @@ let users: Array <{name: string, role: Role}> = [
     }
 ]
 
-console.log( users.filter( (user) => user.role === 'Client )); 
+console.log( users.filter( (user) => user.role === Role.Client )); 

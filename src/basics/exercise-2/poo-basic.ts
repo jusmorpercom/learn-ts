@@ -68,3 +68,4 @@ class Auto2 {
 let ford = new Auto2(500, 'Ford')
 console.log(ford)
 ford.apagar(); // es publico, encender no se puede acceder por afuera porque es privado, lo privado solo se accede por dentro de la clase 
+

@@ -22,7 +22,6 @@ class Auto { //las llaves es el molde
     }
 
     prender() {
-        console.log('Prendiendo')
     }
 }
 

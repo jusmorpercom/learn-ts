@@ -1,14 +1,28 @@
 interface IPersona {
 
-    readonly nombre?: string;
-    readonly apellido?: string;
+    readonly nombre: string;
+    readonly apellido: string;
     edad?: number; 
 
-    this.nombre_completo = function(){
-        return this.nombre + ' ' + this.apellido; 
-    } 
-
-    // function nombre_completo2(nombre, apellido){
-    //     return name + ' ' + apellido
-    // }
+    nombre_completo(): string
 };
+
+class Hombre implements IPersona {
+
+    nombre: string | undefined;
+    apellido: string | undefined;
+    edad: number | undefined;
+    nombre_completo(): string {
+        return this.nombre + ' ' + this.apellido
+    }
+
+    constructor(nombre, apellido, edad) {
+        this.nombre = nombre;
+        this.apellido = apellido;
+        this.edad = edad;
+    }
+
+    hablar_futbol(equipo: string, minutos: number): void {
+        console.log(`Hablemos sobre el ${equipo} ${minutos}, pues esta jugando como los dioses`);
+    }
+}
